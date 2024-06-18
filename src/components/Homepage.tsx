@@ -43,3 +43,5 @@ function Homepage_(props: HomepageProps, ref: HTMLElementRefOf<"div">) {
 
 const Homepage = React.forwardRef(Homepage_);
 export default Homepage;
+
+// Testing comment for the Homepage component
