@@ -80,6 +80,9 @@ export const PlasmicNewPage__ArgProps = new Array<ArgPropType>();
 export type PlasmicNewPage__OverridesType = {
   root?: Flex__<"div">;
   pageLayout?: Flex__<typeof PageLayout>;
+  section?: Flex__<"section">;
+  h1?: Flex__<"h1">;
+  img?: Flex__<typeof PlasmicImg__>;
 };
 
 export interface DefaultNewPageProps {
@@ -131,7 +134,66 @@ function PlasmicNewPage__RenderFunc(props: {
           <PageLayout
             data-plasmic-name={"pageLayout"}
             data-plasmic-override={overrides.pageLayout}
-          />
+          >
+            <DataCtxReader__>
+              {$ctx => (
+                <React.Fragment>
+                  <section
+                    data-plasmic-name={"section"}
+                    data-plasmic-override={overrides.section}
+                    className={classNames(projectcss.all, sty.section)}
+                  >
+                    <h1
+                      data-plasmic-name={"h1"}
+                      data-plasmic-override={overrides.h1}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h1,
+                        projectcss.__wab_text,
+                        sty.h1
+                      )}
+                    >
+                      {"asfasffafaf"}
+                    </h1>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__ecI9B
+                      )}
+                    >
+                      {
+                        "Press the big blue + button to insert components like Tables, Text, Buttons, and Forms.\n\nJoin our Slack Community (icon in bottom left) for help!"
+                      }
+                    </div>
+                  </section>
+                  <PlasmicImg__
+                    data-plasmic-name={"img"}
+                    data-plasmic-override={overrides.img}
+                    alt={""}
+                    className={classNames(sty.img)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"auto"}
+                    loading={"lazy"}
+                  />
+
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__hsT1X
+                    )}
+                  >
+                    {"Enter some text"}
+                  </div>
+                </React.Fragment>
+              )}
+            </DataCtxReader__>
+          </PageLayout>
         </div>
       </div>
     </React.Fragment>
@@ -139,8 +201,11 @@ function PlasmicNewPage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "pageLayout"],
-  pageLayout: ["pageLayout"]
+  root: ["root", "pageLayout", "section", "h1", "img"],
+  pageLayout: ["pageLayout", "section", "h1", "img"],
+  section: ["section", "h1"],
+  h1: ["h1"],
+  img: ["img"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -148,6 +213,9 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   pageLayout: typeof PageLayout;
+  section: "section";
+  h1: "h1";
+  img: typeof PlasmicImg__;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -236,6 +304,9 @@ export const PlasmicNewPage = Object.assign(
   {
     // Helper components rendering sub-elements
     pageLayout: makeNodeComponent("pageLayout"),
+    section: makeNodeComponent("section"),
+    h1: makeNodeComponent("h1"),
+    img: makeNodeComponent("img"),
 
     // Metadata about props expected for PlasmicNewPage
     internalVariantProps: PlasmicNewPage__VariantProps,

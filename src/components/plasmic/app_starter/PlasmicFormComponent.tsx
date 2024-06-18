@@ -213,14 +213,14 @@ function PlasmicFormComponent__RenderFunc(props: {
             {...child$Props}
           >
             <FormItemWrapper
-              className={classNames("__wab_instance", sty.formField__ulZim)}
+              className={classNames("__wab_instance", sty.formField__n2JvT)}
               label={"Name"}
               name={"name"}
             >
               <AntdInput className={classNames("__wab_instance", sty.input)} />
             </FormItemWrapper>
             <FormItemWrapper
-              className={classNames("__wab_instance", sty.formField__slP7K)}
+              className={classNames("__wab_instance", sty.formField__vr0Re)}
               label={"Message"}
               name={"message"}
             >

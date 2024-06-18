@@ -492,7 +492,7 @@ function PlasmicTableComponent__RenderFunc(props: {
               {...child$Props}
             >
               <FormItemWrapper
-                className={classNames("__wab_instance", sty.formField__lppzr)}
+                className={classNames("__wab_instance", sty.formField___12OXg)}
                 initialValue={``}
                 label={"Name"}
                 name={"name"}
@@ -502,7 +502,7 @@ function PlasmicTableComponent__RenderFunc(props: {
                 />
               </FormItemWrapper>
               <FormItemWrapper
-                className={classNames("__wab_instance", sty.formField__aSqFv)}
+                className={classNames("__wab_instance", sty.formField__pqIp9)}
                 initialValue={"message initial value"}
                 label={"Message"}
                 name={"message"}
@@ -520,7 +520,7 @@ function PlasmicTableComponent__RenderFunc(props: {
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.text__oOkvz
+                    sty.text__i8Ja
                   )}
                 >
                   {"Submit"}

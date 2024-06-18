@@ -21,7 +21,7 @@
 .root > * {
   grid-column: 4;
 }
-.section__tYlb {
+.section {
   display: grid;
   align-content: flex-start;
   justify-items: center;
@@ -38,10 +38,10 @@
     minmax(0, var(--plsmc-wide-chunk)) 1fr var(--plsmc-viewport-gap);
   padding: 8px 0;
 }
-.section__tYlb > * {
+.section > * {
   grid-column: 4;
 }
-.h1__okykq {
+.h1 {
   position: relative;
   width: 100%;
   height: auto;
@@ -49,6 +49,21 @@
   min-width: 0;
 }
 .text__ecI9B {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+.img {
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+}
+.img > picture > img {
+  object-fit: cover;
+}
+.text__hsT1X {
   position: relative;
   width: 100%;
   height: auto;
